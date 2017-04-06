@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Agustin Fassola</title>
+    </h:head>
+    <h:body>
+        <p:panel id="pnlFactorial"
+                 header="calculo del factorial"
+                 style="width: 400px"
+                 footer="Escuela de Minas">
+            <h:form id="frmFactorial">
+                <h:panelGrid id="tblFactorial" columns="2">
+                    <p:outputLabel id="lblNumero" value="ingrese un numero"/>
+                    <p:inputText id="txtNumero" value="#{factorialFormBean.n}"/>
+                    <p:commandButton id="btnCalcular" value="calcular" update="lblValorFactorial"/>
+                    <p:outputLabel id="lblValorFactorial" value="n!:#{factorialFormBean.calcularFactorial()} "/>
+                </h:panelGrid>
+              
+            </h:form>   
+        </p:panel>
+    </h:body>
+</html>
+
